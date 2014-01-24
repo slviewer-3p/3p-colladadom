@@ -235,7 +235,7 @@ def packageMac(opts):
 
     print 'Building the DOM'
     makeCmd = 'make' + ' -C ' + join(codePath, 'dom') + ' -k' + \
-              ' -j ' + getBuildJobs(opts) + ' conf=release' + " arch='x86 ppc'"
+              ' -j ' + getBuildJobs(opts) + ' conf=release' + " arch='x86'"
     os.system(makeCmd)
 
     zip = createArchive(join(outdir, 'colladadom-mac'), getArchive(opts))
