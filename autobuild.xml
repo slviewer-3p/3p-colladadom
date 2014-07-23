@@ -5,8 +5,10 @@
     <map>
       <key>boost</key>
       <map>
+        <key>description</key>
+        <string>Boost C++ Libraries</string>
         <key>license</key>
-        <string>boost</string>
+        <string>boost 1.0</string>
         <key>license_file</key>
         <string>LICENSES/boost.txt</string>
         <key>name</key>
@@ -18,9 +20,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b57789bd22dd166aade4a35ec5d36fbb</string>
+              <string>d65261451b41e56476786eeab740231f</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-boost-update/rev/290566/arch/Darwin/installer/boost-1.55.0-darwin-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-boost/rev/292231/arch/Darwin/installer/boost-1.55.0-darwin-292231.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -30,9 +32,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>2f076eae296600a1b810ce375dc4b42d</string>
+              <string>c5fe4e1d4af694e9b85ec9465c0683e1</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-boost-update/rev/290566/arch/Linux/installer/boost-1.55.0-linux-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-boost/rev/292231/arch/Linux/installer/boost-1.55.0-linux-292231.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -42,17 +44,23 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8af0500013739866a41cfc2ce90e4f4b</string>
+              <string>4b43cf421bbedb20b19660a20a784c34</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-boost-update/rev/290566/arch/CYGWIN/installer/boost-1.55.0-windows-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-boost/rev/292231/arch/CYGWIN/installer/boost-1.55.0-windows-292231.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
           </map>
         </map>
+        <key>version</key>
+        <string>1.55.0</string>
       </map>
       <key>libxml2</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright (C) 1998-2012 Daniel Veillard.  All Rights Reserved.</string>
+        <key>description</key>
+        <string>Libxml2 is the XML C parser and toolkit developed for the Gnome project.</string>
         <key>license</key>
         <string>mit</string>
         <key>license_file</key>
@@ -66,9 +74,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>4a5880b8235beb5ca21f1e252a46e342</string>
+              <string>ca6d1665d5a88138a48faae3d5c4c849</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-libxml-update/rev/290562/arch/Darwin/installer/libxml2-2.9.1-darwin-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-libxml/rev/290804/arch/Darwin/installer/libxml2-2.9.1-darwin-290804.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -78,9 +86,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7eb90f075730f8d7d176f8fb7bad5ef5</string>
+              <string>06c34f74ac599058fe6d13742172287d</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-libxml-update/rev/290562/arch/Linux/installer/libxml2-2.9.1-linux-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-libxml/rev/290804/arch/Linux/installer/libxml2-2.9.1-linux-290804.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -90,17 +98,23 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ba20e2634b4c249a7064620d135f7972</string>
+              <string>9fcc8b5bc371f6038ede19fb4dd7b521</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-libxml-update/rev/290562/arch/CYGWIN/installer/libxml2-2.9.1-windows-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-libxml/rev/290804/arch/CYGWIN/installer/libxml2-2.9.1-windows-290804.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
           </map>
         </map>
+        <key>version</key>
+        <string>2.9.1</string>
       </map>
       <key>pcre</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright (c) 1997-2014 University of Cambridge; Copyright(c) 2009-2014 Zoltan Herczeg; Copyright (c) 2007-2012, Google Inc.</string>
+        <key>description</key>
+        <string>PCRE Perl-compatible regular expression library</string>
         <key>license</key>
         <string>bsd</string>
         <key>license_file</key>
@@ -114,9 +128,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>af0d38a4c56b52c4df40a4ff0d51efef</string>
+              <string>27df5b97f5c6e27ff130a40398ccdbb1</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-pcre-update/rev/290406/arch/Darwin/installer/pcre-8.35-darwin-20140529.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-pcre/rev/290810/arch/Darwin/installer/pcre-8.35-darwin-290810.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -126,9 +140,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>5e6368d39b95f2c0d5162dac2c17c67f</string>
+              <string>90d096a1183b8bcdb8075bed34bc2442</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-pcre-update/rev/290406/arch/Linux/installer/pcre-8.35-linux-20140530.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-pcre/rev/290810/arch/Linux/installer/pcre-8.35-linux-290810.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -138,17 +152,23 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>9250f74fed826ad1b8700229e964519d</string>
+              <string>53ac60e13ef7f4fd906f5b5e94e266c4</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-pcre-update/rev/290406/arch/CYGWIN/installer/pcre-8.35-windows-20140529.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-pcre/rev/290810/arch/CYGWIN/installer/pcre-8.35-windows-290810.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
           </map>
         </map>
+        <key>version</key>
+        <string>8.35</string>
       </map>
       <key>zlib</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler</string>
+        <key>description</key>
+        <string>Zlib Data Compression Library</string>
         <key>license</key>
         <string>zlib</string>
         <key>license_file</key>
@@ -162,9 +182,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>6658071e3b54b1dd5f5279227aff402a</string>
+              <string>b207b3679cadc3ffef5697070c501ce3</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-zlib-update/rev/290556/arch/Darwin/installer/zlib-1.2.8-darwin-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-zlib-update/rev/290734/arch/Darwin/installer/zlib-1.2.8-darwin-290734.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -174,9 +194,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>63a62bb3cbef2aad3cca49cb6f2d0aeb</string>
+              <string>88a2652f5c7efc1e973708d8c3515767</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-zlib-update/rev/290556/arch/Linux/installer/zlib-1.2.8-linux-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-zlib-update/rev/290734/arch/Linux/installer/zlib-1.2.8-linux-290734.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -186,14 +206,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ab45a628e22a495814e806ce46081806</string>
+              <string>a168a1e80284f671d12b2d7f24ddf226</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-zlib-update/rev/290556/arch/CYGWIN/installer/zlib-1.2.8-windows-20140602.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-zlib-update/rev/290734/arch/CYGWIN/installer/zlib-1.2.8-windows-290734.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
           </map>
         </map>
+        <key>version</key>
+        <string>1.2.8</string>
       </map>
     </map>
     <key>package_description</key>
