@@ -5,6 +5,8 @@
     <map>
       <key>boost</key>
       <map>
+        <key>copyright</key>
+        <string>(see individual source files)</string>
         <key>description</key>
         <string>Boost C++ Libraries</string>
         <key>license</key>
@@ -20,9 +22,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>d65261451b41e56476786eeab740231f</string>
+              <string>e282348b8a6c6ce6b08f26a4470319bd</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-boost/rev/292231/arch/Darwin/installer/boost-1.55.0-darwin-292231.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/boost_3p-update-boost/rev/295278/arch/Darwin/installer/boost-1.56-darwin-295278.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -53,7 +55,7 @@
           </map>
         </map>
         <key>version</key>
-        <string>1.55.0</string>
+        <string>1.56</string>
       </map>
       <key>libxml2</key>
       <map>
@@ -74,9 +76,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ca6d1665d5a88138a48faae3d5c4c849</string>
+              <string>6f6c3409a09a6ddcb94301ead123c89f</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-libxml/rev/290804/arch/Darwin/installer/libxml2-2.9.1-darwin-290804.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/libxml_3p-update-libxml/rev/295247/arch/Darwin/installer/libxml2-2.9.1.295247-darwin-295247.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -107,7 +109,7 @@
           </map>
         </map>
         <key>version</key>
-        <string>2.9.1</string>
+        <string>2.9.1.295247</string>
       </map>
       <key>pcre</key>
       <map>
@@ -128,9 +130,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>27df5b97f5c6e27ff130a40398ccdbb1</string>
+              <string>6e05137f8d30ef05b3b1c3f39860265d</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-pcre/rev/290810/arch/Darwin/installer/pcre-8.35-darwin-290810.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/pcre_3p-update-pcre/rev/295046/arch/Darwin/installer/pcre-8.35.-darwin-295046.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -161,7 +163,7 @@
           </map>
         </map>
         <key>version</key>
-        <string>8.35</string>
+        <string>8.35.</string>
       </map>
       <key>zlib</key>
       <map>
@@ -182,9 +184,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b207b3679cadc3ffef5697070c501ce3</string>
+              <string>567f437d22d891c811aa9a70e2b63ad8</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-zlib-update/rev/290734/arch/Darwin/installer/zlib-1.2.8-darwin-290734.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/zlib_3p-update-zlib/rev/294883/arch/Darwin/installer/zlib-1.2.8.294883-darwin-294883.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -215,11 +217,13 @@
           </map>
         </map>
         <key>version</key>
-        <string>1.2.8</string>
+        <string>1.2.8.294883</string>
       </map>
     </map>
     <key>package_description</key>
     <map>
+      <key>copyright</key>
+      <string>Copyright 2006 Sony Computer Entertainment Inc.</string>
       <key>license</key>
       <string>SCEA</string>
       <key>license_file</key>
@@ -356,12 +360,12 @@
       </map>
       <key>source_directory</key>
       <string>.</string>
-      <key>version</key>
-      <string>2.3</string>
+      <key>version_file</key>
+      <string>VERSION.txt</string>
     </map>
     <key>type</key>
     <string>autobuild</string>
     <key>version</key>
-    <string>1.2</string>
+    <string>1.3</string>
   </map>
 </llsd>

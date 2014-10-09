@@ -26,6 +26,10 @@ stage="$top/stage"
 
 [ -f "$stage"/packages/include/zlib/zlib.h ] || fail "You haven't installed zlib package yet."
 
+version="xxx.work-in-progress.xxx"
+build=${AUTOBUILD_BUILD_ID:=0}
+echo "${version}.${build}" > "${stage}/VERSION.txt"
+
 case "$AUTOBUILD_PLATFORM" in
 
     windows)
@@ -65,7 +69,7 @@ case "$AUTOBUILD_PLATFORM" in
         # sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/
         sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/
             
-        opts="${TARGET_OPTS:--arch i386 -iwithsysroot $sdk -mmacosx-version-min=10.6 -DMAC_OS_X_VERSION_MIN_REQUIRED=1060}"
+        opts="${TARGET_OPTS:--arch i386 -iwithsysroot $sdk -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1080}"
 
         libdir="$top/stage"
         mkdir -p "$libdir"/lib/{debug,release}
