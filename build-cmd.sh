@@ -5,7 +5,7 @@ set -x
 # make errors fatal
 set -e
 
-if [ -z "$AUTOBUILD" ] ; then 
+if [ -z "$AUTOBUILD" ] ; then
     fail
 fi
 
@@ -26,16 +26,19 @@ stage="$top/stage"
 
 [ -f "$stage"/packages/include/zlib/zlib.h ] || fail "You haven't installed zlib package yet."
 
-version="xxx.work-in-progress.xxx"
+# version appears in readme.txt as 2.2 but extensive Readme.Linden suggests
+# that the real version is based on a 2.3 source drop.  Rather than try to
+# figure this out now, I'm going to 2.3 hardcoded here.
+collada_version="2.3"
 build=${AUTOBUILD_BUILD_ID:=0}
-echo "${version}.${build}" > "${stage}/VERSION.txt"
+echo "${collada_version}.${build}" > "${stage}/VERSION.txt"
 
 case "$AUTOBUILD_PLATFORM" in
 
     windows)
         build_sln "projects/vc10-1.4/dom.sln" "Debug|Win32" domTest
         build_sln "projects/vc10-1.4/dom.sln" "Release|Win32" domTest
-        
+
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
             build/vc10-1.4-d/domTest.exe -all
@@ -46,7 +49,7 @@ case "$AUTOBUILD_PLATFORM" in
         mkdir -p "$stage"/lib/{debug,release}
         cp -a build/vc10-1.4-d/libcollada14dom23-sd.lib \
             "$stage"/lib/debug/
-                
+
         cp -a build/vc10-1.4/libcollada14dom23-s.lib \
             "$stage"/lib/release/
     ;;
@@ -67,9 +70,8 @@ case "$AUTOBUILD_PLATFORM" in
         # sdk=/Developer/SDKs/MacOSX10.6.sdk/
         # sdk=/Developer/SDKs/MacOSX10.7.sdk/
         # sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/
-        sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/
-            
-        opts="${TARGET_OPTS:--arch i386 -iwithsysroot $sdk -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1080}"
+        sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/
+        opts="${TARGET_OPTS:--arch i386 -iwithsysroot $sdk -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070}"
 
         libdir="$top/stage"
         mkdir -p "$libdir"/lib/{debug,release}
@@ -88,9 +90,9 @@ case "$AUTOBUILD_PLATFORM" in
             build/mac-1.4/domTest -all
         fi
 
-        # install_name_tool -id "@executable_path/../Resources/libcollada14dom-d.dylib" "build/mac-1.4-d/libcollada14dom-d.dylib" 
-        # install_name_tool -id "@executable_path/../Resources/libcollada14dom.dylib" "build/mac-1.4/libcollada14dom.dylib" 
- 
+        # install_name_tool -id "@executable_path/../Resources/libcollada14dom-d.dylib" "build/mac-1.4-d/libcollada14dom-d.dylib"
+        # install_name_tool -id "@executable_path/../Resources/libcollada14dom.dylib" "build/mac-1.4/libcollada14dom.dylib"
+
         cp -a build/mac-1.4-d/libcollada14dom-d.a "$libdir"/lib/debug/
         cp -a build/mac-1.4/libcollada14dom.a "$libdir"/lib/release/
     ;;
@@ -126,7 +128,7 @@ case "$AUTOBUILD_PLATFORM" in
             unset CPPFLAGS
         else
             # Incorporate special pre-processing flags
-            export CPPFLAGS="$TARGET_CPPFLAGS" 
+            export CPPFLAGS="$TARGET_CPPFLAGS"
         fi
 
         libdir="$top/stage"
@@ -138,7 +140,7 @@ case "$AUTOBUILD_PLATFORM" in
             CFLAGS="$opts" \
             CXXFLAGS="$opts" \
             arch=i386 \
-            make 
+            make
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
