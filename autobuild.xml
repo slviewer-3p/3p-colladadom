@@ -22,9 +22,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>a8252cb5f0eae61ada2f02163e67b752</string>
+              <string>26dc7724d5b6b504b0989ab59ba209f3</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/boost_3p-update-boost/rev/295616/arch/Darwin/installer/boost-1.56-darwin-295616.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/boost_3p-update-boost/rev/297087/arch/Darwin/installer/boost-1.57-darwin-297087.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -34,9 +34,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>c5fe4e1d4af694e9b85ec9465c0683e1</string>
+              <string>9c2a2297ee330c81d31c50ebb30e2725</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-boost/rev/292231/arch/Linux/installer/boost-1.55.0-linux-292231.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/boost_3p-update-boost/rev/297087/arch/Linux/installer/boost-1.57-linux-297087.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -46,16 +46,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>4b43cf421bbedb20b19660a20a784c34</string>
+              <string>ee1ad887ab438fd76ec450c128b1fd4f</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/oz-metadata_3p-boost/rev/292231/arch/CYGWIN/installer/boost-1.55.0-windows-292231.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/boost_3p-update-boost/rev/297087/arch/CYGWIN/installer/boost-1.57-windows-297087.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
           </map>
         </map>
         <key>version</key>
-        <string>1.56</string>
+        <string>1.57</string>
       </map>
       <key>libxml2</key>
       <map>
