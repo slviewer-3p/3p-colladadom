@@ -257,8 +257,8 @@
           <key>manifest</key>
           <array>
             <string>include/collada</string>
-            <string>LICENSES/collada.txt</string>
-            <string>LICENSES/collada-other/*.txt</string>
+            <string>LICENSES/*.txt</string>
+<!--        <string>LICENSES/collada-other/*.txt</string>  -->
             <string>docs/colladadom/README.Linden</string>
           </array>
           <key>name</key>
