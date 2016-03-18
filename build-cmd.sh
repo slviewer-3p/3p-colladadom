@@ -35,23 +35,33 @@ echo "${collada_version}.${build}" > "${stage}/VERSION.txt"
 
 case "$AUTOBUILD_PLATFORM" in
 
-    windows)
-        build_sln "projects/vc12-1.4/dom.sln" "Debug|Win32" domTest
-        build_sln "projects/vc12-1.4/dom.sln" "Release|Win32" domTest
+    windows*)
+        build_sln "projects/vc12-1.4/dom.sln" "Release|$AUTOBUILD_WIN_VSPLATFORM" dom
+        build_sln "projects/vc12-1.4/dom.sln" "Release|$AUTOBUILD_WIN_VSPLATFORM" dom-static
+        build_sln "projects/vc12-1.4/dom.sln" "Release|$AUTOBUILD_WIN_VSPLATFORM" domTest
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-            build/vc12-1.4-d/domTest.exe -all
-            build/vc12-1.4/domTest.exe -all
+            if [ "$AUTOBUILD_ADDRSIZE" = 32 ]
+                then
+                    build/vc12-1.4/domTest.exe -all
+                else
+                    # 64 bit exe ends up in different location to 32 bit hard coded 
+                    # path to data directory - source code suggests it looks in a dir
+                    # called domTestData first so we make one
+                    mkdir -p projects/vc12-1.4/x64/Release/domTestData
+                    cp test/1.4/data/* projects/vc12-1.4/x64/Release/domTestData/
+                    projects/vc12-1.4/x64/Release/domTest.exe -all
+            fi
         fi
 
         # stage the good bits
-        mkdir -p "$stage"/lib/{debug,release}
-        cp -a build/vc12-1.4-d/libcollada14dom23-sd.lib \
-            "$stage"/lib/debug/
+        mkdir -p "$stage"/lib/release
 
-        cp -a build/vc12-1.4/libcollada14dom23-s.lib \
-            "$stage"/lib/release/
+        if [ "$AUTOBUILD_ADDRSIZE" = 32 ]
+            then cp -a build/vc12-1.4/libcollada14dom23-s.lib "$stage"/lib/release/
+            else cp -a projects/vc12-1.4/x64/Release/libcollada14dom23-s.lib "$stage"/lib/release/ 
+        fi
     ;;
 
     darwin)
