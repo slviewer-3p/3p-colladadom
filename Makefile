@@ -42,11 +42,13 @@ os := mac
 CXX ?= llvm-g++
 CXXFLAGS += -fno-stack-protector
 LDFLAGS += -fno-stack-protector
+## LDFLAGS:= -fno-stack-protector -mmacosx-version-min=10.4 -DMAC_OS_X_VERSION_MIN_REQUIRED=1040 -isysroot /Developer/SDKs/MacOSX10.5.sdk
 else ifneq ($(or $(shell uname | grep -i cygwin),$(shell uname | grep -i mingw)),)
 os := windows
 else
 #linux system, ensure we're using gcc-4.1 if nothing else specified
-CXX ?= g++-4.1
+## Hopelessly outdated as of 2014-01-24
+## CXX:=g++-4.1
 endif
 
 # nativeArch: For internal use. Don't override this, instead override 'arch'.
