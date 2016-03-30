@@ -83,6 +83,9 @@ public:
 	 */
 	virtual daeInt getCount(daeElement* e);
 
+    /// single-arg get() inherited from base class
+    using daeMetaAttribute::get;
+
 	/**
 	 * Gets an element from containing element <tt><i>e</i></tt> based on <tt><i>index.</i></tt> 
 	 * @param e Containing element from which to get the element.
