@@ -8,7 +8,9 @@ ar := ar rcs
 exeSuffix :=
 endif
 
-ccFlags := $(CXXFLAGS) -Wall
+# Put -Wall at the *front* of the ccFlags list. That way if CXXFLAGS specifies
+# any -Wno-something warning suppression flags, they won't be overridden.
+ccFlags := -Wall $(CXXFLAGS)
 ifeq ($(conf),debug)
 ccFlags += -g -D_DEBUG
 debugSuffix := -d
@@ -19,7 +21,7 @@ endif
 
 ifeq ($(os),mac)
 # Add the -arch flags to specify what architectures we're building for.
-ccFlags += $(addprefix -arch ,$(subst x86,i386,$(archs)))
+ccFlags += $(addprefix -arch ,$(archs))
 endif
 
 libOpts := $(LDFLAGS)
@@ -33,7 +35,8 @@ endif
 
 ifeq ($(os),linux)
 #enforce 32-bit builds, even when building on 64-bit machines
-ccFlags += -m32
+## no, don't - nat 2016-03-29
+##ccFlags += -m32
 endif
 
 ifeq ($(colladaVersion),1.4)
