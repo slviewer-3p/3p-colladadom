@@ -101,7 +101,7 @@ $(error Invalid setting os=$(os))
 endif
 
 archs := $(sort $(subst i386,x86,$(arch)))
-ifneq ($(filter-out x86 ppc,$(archs)),)
+ifneq ($(filter-out x86 ppc x86_64,$(archs)),)
 $(error Invalid setting arch=$(arch))
 endif
 
