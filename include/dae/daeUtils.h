@@ -54,9 +54,39 @@ namespace cdom {
 	                      bool separatorsInResult = false);
 
 	typedef std::list<std::string>::iterator tokenIter;
-	
-	DLLSPEC std::vector<std::string> makeStringArray(const char* s, ...);
-	DLLSPEC std::list<std::string> makeStringList(const char* s, ...);
+
+//	DLLSPEC std::vector<std::string> makeStringArray(const char* s, ...);
+//	DLLSPEC std::list<std::string> makeStringList(const char* s, ...);
+	// degenerate makeString<T>(Container&, 0): end of recursion
+	template < class Container, typename Type0 >
+	void makeString(Container&, Type0 string0)
+	{
+		// All existing calls end with 0
+		assert(! string0);
+	}
+	// makeString(Container&, at least one string, ..., 0)
+	template < class Container,
+			   typename Type0, typename Type1, typename ... Types >
+	void makeString(Container& partial,
+					Type0 string0, Type1 string1, Types... strings)
+	{
+		partial.push_back(string0);
+		makeString(partial, string1, strings...);
+	}
+	template < typename ... Types >
+	std::vector<std::string> makeStringArray(Types... strings)
+	{
+		std::vector<std::string> result;
+		makeString(result, strings...);
+		return result;
+	}
+	template < typename ... Types >
+	std::list<std::string> makeStringList(Types... strings)
+	{
+		std::list<std::string> result;
+		makeString(result, strings...);
+		return result;
+	}
 
 	DLLSPEC std::string getCurrentDir();
 	DLLSPEC std::string getCurrentDirAsUri();
