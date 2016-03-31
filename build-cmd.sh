@@ -172,11 +172,12 @@ case "$AUTOBUILD_PLATFORM" in
 
         make clean arch="$AUTOBUILD_CONFIGURE_ARCH" # Hide 'arch' env var
 
-        LDFLAGS="$opts" \
+        make \
+            conf=release \
+            LDFLAGS="$opts" \
             CFLAGS="$opts" \
             CXXFLAGS="$opts" \
-            arch="$AUTOBUILD_CONFIGURE_ARCH" \
-            make
+            arch="$AUTOBUILD_CONFIGURE_ARCH"
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
