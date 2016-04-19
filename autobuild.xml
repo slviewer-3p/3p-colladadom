@@ -34,9 +34,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>24fc11cb1ca2a01843a9de399f174d5d</string>
+              <string>0e627ccbf2ca903814f42cd871a3233d</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-boost/rev/312550/arch/Darwin/installer/boost-1.57-darwin64-312550.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-boost/rev/314242/arch/Darwin/installer/boost-1.57-darwin64-314242.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -46,9 +46,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>d3c8484429c855ad93dc89ea5a0603b9</string>
+              <string>d60e5ed54e2774e399a231b8defcb31b</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-boost/rev/312550/arch/Linux/installer/boost-1.57-linux-312550.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-boost/rev/314242/arch/Linux/installer/boost-1.57-linux-314242.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -58,9 +58,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>cf32b595b9826c5cf24a21cf38c5ab79</string>
+              <string>2471164e2db975b5340741e50ad74c76</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-boost/rev/312550/arch/Linux/installer/boost-1.57-linux64-312550.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-boost/rev/314242/arch/Linux/installer/boost-1.57-linux64-314242.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -70,9 +70,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b2349cb79d2aa087e37082d32a7b191b</string>
+              <string>a9ab519a3e3424d8326defdf68358c64</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-boost/rev/312550/arch/CYGWIN/installer/boost-1.57-windows-312550.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-boost/rev/314242/arch/CYGWIN/installer/boost-1.57-windows-314242.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -82,9 +82,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>138c2c53dff87b489a00663f2430831d</string>
+              <string>766a0830be9312db870febe5e64e4b43</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-boost/rev/312550/arch/CYGWIN/installer/boost-1.57-windows64-312550.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-boost/rev/314242/arch/CYGWIN/installer/boost-1.57-windows64-314242.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -124,9 +124,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>0bce7ba037f46126388e019ca8d2d628</string>
+              <string>de97bc36679d2bac64adc8171db1da77</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-libxml/rev/312322/arch/Darwin/installer/libxml2-2.9.1.312322-darwin64-312322.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-libxml/rev/314197/arch/Darwin/installer/libxml2-2.9.1.314197-darwin64-314197.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -136,9 +136,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>60da4736e97c8bf025999d7a3d3b5ca6</string>
+              <string>6954173a141d928f2614076577d952de</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-libxml/rev/312322/arch/Linux/installer/libxml2-2.9.1.312322-linux-312322.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-libxml/rev/314197/arch/Linux/installer/libxml2-2.9.1.314197-linux-314197.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -148,9 +148,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>9af297f60f3d1e15bf9a9bfe44efbb3b</string>
+              <string>007713576a332feec51c67a7683bbd78</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-libxml/rev/312322/arch/Linux/installer/libxml2-2.9.1.312322-linux64-312322.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-libxml/rev/314197/arch/Linux/installer/libxml2-2.9.1.314197-linux64-314197.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -160,9 +160,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7534589f595d8c15c6c5d4b24a6711c4</string>
+              <string>6038c1722c263012d63b2d3a31685aa8</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-libxml/rev/312322/arch/CYGWIN/installer/libxml2-2.9.1.312322-windows-312322.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-libxml/rev/314197/arch/CYGWIN/installer/libxml2-2.9.1.314197-windows-314197.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -172,16 +172,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>337b15eb2f7af178e6945bf9a057ccea</string>
+              <string>04cdb377779d6bf29d4467f964944c01</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-libxml/rev/312322/arch/CYGWIN/installer/libxml2-2.9.1.312322-windows64-312322.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-libxml/rev/314197/arch/CYGWIN/installer/libxml2-2.9.1.314197-windows64-314197.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.9.1.312322</string>
+        <string>2.9.1.314197</string>
       </map>
       <key>pcre</key>
       <map>
@@ -214,9 +214,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>a40b8fa290db49641e666e4b861a84db</string>
+              <string>13ec0233ee1fc4441f26d1cb6ade0287</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/312521/arch/Darwin/installer/pcre-8.35.312521-darwin64-312521.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/Darwin/installer/pcre-8.35.314136-darwin64-314136.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -226,9 +226,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7a24514882f881800f029cf7e037de32</string>
+              <string>24a119b18e63017ad932ad54df8161bc</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/312521/arch/Linux/installer/pcre-8.35.312521-linux-312521.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/Linux/installer/pcre-8.35.314136-linux-314136.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -238,9 +238,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b2c3ffd156ac808db251a7b9be4cd6bc</string>
+              <string>93d3371551a87ed9c8fa4b27cde150da</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/312521/arch/Linux/installer/pcre-8.35.312521-linux64-312521.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/Linux/installer/pcre-8.35.314136-linux64-314136.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -250,9 +250,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>599b780656be782bb284664064a0a80a</string>
+              <string>3798d2e60fd1c49ba35a7901e362a078</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/312521/arch/CYGWIN/installer/pcre-8.35.312521-windows-312521.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/CYGWIN/installer/pcre-8.35.314136-windows-314136.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -262,16 +262,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>f0a4366b0a1f2c8e0aa9fb3da6d60524</string>
+              <string>ac9206c56d29296d631d7293e6fcad85</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/312521/arch/CYGWIN/installer/pcre-8.35.312521-windows64-312521.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/CYGWIN/installer/pcre-8.35.314136-windows64-314136.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>8.35.312521</string>
+        <string>8.35.314136</string>
       </map>
       <key>zlib</key>
       <map>
@@ -304,9 +304,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>9765e74c8d85f485b18214e0d5f50ed4</string>
+              <string>84eebbb870886716fbf7176d0b473fd7</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/Darwin/installer/zlib-1.2.8.312301-darwin64-312301.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/Darwin/installer/zlib-1.2.8.314131-darwin64-314131.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -316,9 +316,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>1bcb914c438d631c2165ce28d9577883</string>
+              <string>98a8c775c581ca80bb559e8b4e8eaae7</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/Linux/installer/zlib-1.2.8.312301-linux-312301.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/Linux/installer/zlib-1.2.8.314131-linux-314131.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -328,9 +328,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>e4ea1935da59d3c03e1c06e776b0c5e3</string>
+              <string>37750458efb8efc3deab0869c492d899</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/Linux/installer/zlib-1.2.8.312301-linux64-312301.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/Linux/installer/zlib-1.2.8.314131-linux64-314131.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -340,9 +340,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>d9286efe05f2bf64206dcf790f5dc966</string>
+              <string>8a53c8ffee30decb4ed2ce2bdb013ee3</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/CYGWIN/installer/zlib-1.2.8.312301-windows-312301.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/CYGWIN/installer/zlib-1.2.8.314131-windows-314131.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -352,16 +352,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>91655a548f19041460bac8c827d5cc3c</string>
+              <string>b0a59f6c440893187ec9b5ba70f1f828</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/canonical_3p-zlib/rev/312301/arch/CYGWIN/installer/zlib-1.2.8.312301-windows64-312301.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/CYGWIN/installer/zlib-1.2.8.314131-windows64-314131.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>1.2.8.312301</string>
+        <string>1.2.8.314131</string>
       </map>
     </map>
     <key>package_description</key>
