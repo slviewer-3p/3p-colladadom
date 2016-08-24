@@ -39,14 +39,16 @@ os := linux
 ifneq ($(shell uname | grep -i darwin),)
 os := mac
 # make sure mac builds on llvm-gcc (4.2) and uses the 10.7 sdk with min version of 10.6
-CXX ?= llvm-g++
-CXXFLAGS += -fno-stack-protector
-LDFLAGS += -fno-stack-protector
+## This may have been valuable once, but as of 2014-01-24 it breaks the build
+## CXX:=g++-4.0
+## CXXFLAGS:= -fno-stack-protector -mmacosx-version-min=10.4 -DMAC_OS_X_VERSION_MIN_REQUIRED=1040 -isysroot /Developer/SDKs/MacOSX10.5.sdk
+## LDFLAGS:= -fno-stack-protector -mmacosx-version-min=10.4 -DMAC_OS_X_VERSION_MIN_REQUIRED=1040 -isysroot /Developer/SDKs/MacOSX10.5.sdk
 else ifneq ($(or $(shell uname | grep -i cygwin),$(shell uname | grep -i mingw)),)
 os := windows
 else
 #linux system, ensure we're using gcc-4.1 if nothing else specified
-CXX ?= g++-4.1
+## Hopelessly outdated as of 2014-01-24
+## CXX:=g++-4.1
 endif
 
 # nativeArch: For internal use. Don't override this, instead override 'arch'.
