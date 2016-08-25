@@ -41,7 +41,8 @@ os := mac
 ## This may have been valuable once, but as of 2014-01-24 it breaks the build
 ## CXX:=g++-4.0
 # align with build-variables/variables as of 2016-08-24
-MACFLAGS := -fno-stack-protector -O2 -fPIC -gdwarf-2 -stdlib=libc++ -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070 -iwithsysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/
+# all except for -stdlib=libc++; we'll get there
+MACFLAGS := -fno-stack-protector -O2 -fPIC -gdwarf-2 -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070 -iwithsysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/
 CXXFLAGS:= $(MACFLAGS)
 LDFLAGS:= $(MACFLAGS)
 else ifneq ($(or $(shell uname | grep -i cygwin),$(shell uname | grep -i mingw)),)
