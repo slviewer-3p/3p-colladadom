@@ -214,9 +214,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>13ec0233ee1fc4441f26d1cb6ade0287</string>
+              <string>7a7adcb9074816bf8ca4e7eac6df7675</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/Darwin/installer/pcre-8.35.314136-darwin64-314136.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/495/1059/pcre-8.35.500401-darwin64-500401.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -238,9 +238,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>93d3371551a87ed9c8fa4b27cde150da</string>
+              <string>6344cbf8554f85e0f367c36b8d4fe420</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/Linux/installer/pcre-8.35.314136-linux64-314136.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/473/1010/pcre-8.35.500401-linux64-500401.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -250,9 +250,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>3798d2e60fd1c49ba35a7901e362a078</string>
+              <string>8f548b79be7a122f3f596c25ba2307a6</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/CYGWIN/installer/pcre-8.35.314136-windows-314136.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/517/1114/pcre-8.35.500401-windows-500401.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -262,16 +262,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ac9206c56d29296d631d7293e6fcad85</string>
+              <string>aaed62fee5b2eddf71e20bfcf4b63ae3</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-pcre/rev/314136/arch/CYGWIN/installer/pcre-8.35.314136-windows64-314136.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/515/1111/pcre-8.35.500401-windows64-500401.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>8.35.314136</string>
+        <string>8.35.500401</string>
       </map>
       <key>zlib</key>
       <map>
