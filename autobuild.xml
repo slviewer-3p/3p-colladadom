@@ -304,9 +304,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>84eebbb870886716fbf7176d0b473fd7</string>
+              <string>648993e36c9f94166e03e00f60c34f1c</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/Darwin/installer/zlib-1.2.8.314131-darwin64-314131.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/169/422/zlib-1.2.8.500166-darwin64-500166.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -328,9 +328,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>37750458efb8efc3deab0869c492d899</string>
+              <string>278414cb6cc56595087053becdade007</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/Linux/installer/zlib-1.2.8.314131-linux64-314131.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/168/417/zlib-1.2.8.500166-linux64-500166.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -340,9 +340,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8a53c8ffee30decb4ed2ce2bdb013ee3</string>
+              <string>1d4434dcc616bf5b83a4a2ef6181cd9b</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/CYGWIN/installer/zlib-1.2.8.314131-windows-314131.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/171/428/zlib-1.2.8.500166-windows-500166.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -352,16 +352,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b0a59f6c440893187ec9b5ba70f1f828</string>
+              <string>905f3ffd9c8b95f355f20e297230f02b</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/p64_3p-zlib/rev/314131/arch/CYGWIN/installer/zlib-1.2.8.314131-windows64-314131.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/170/425/zlib-1.2.8.500166-windows64-500166.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>1.2.8.314131</string>
+        <string>1.2.8.500166</string>
       </map>
     </map>
     <key>package_description</key>
