@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # turn on verbose debugging output for parabuild logs.
-set -x
+exec 4>&1; export BASH_XTRACEFD=4; set -x
 # make errors fatal
 set -e
 # complain about unset env variables
 set -u
 
 if [ -z "$AUTOBUILD" ] ; then
-    fail
+    exit 1
 fi
 
 if [ "$OSTYPE" = "cygwin" ] ; then
@@ -19,19 +19,16 @@ fi
 
 #execute build from top-level checkout
 cd "$(dirname "$0")"
-
-# load autobuild provided shell functions and variables
-set +x
-eval "$("$autobuild" source_environment)"
-set -x
-
-# set LL_BUILD and friends
-set_build_variables convenience Release
-
 top="$(pwd)"
 stage="$top/stage"
 
-[ -f "$stage"/packages/include/zlib/zlib.h ] || fail "You haven't yet run autobuild install."
+# load autobuild provided shell functions and variables
+source_environment_tempfile="$stage/source_environment.sh"
+"$autobuild" source_environment > "$source_environment_tempfile"
+. "$source_environment_tempfile"
+
+[ -f "$stage"/packages/include/zlib/zlib.h ] || \
+{ echo "You haven't yet run autobuild install." 1>&2 ; exit 1; }
 
 # There are two version numbers mixed up in the code below: the collada
 # version (e.g. 1.4, upstream from colladadom?) and the dom version (e.g. 2.3,
@@ -61,7 +58,7 @@ case "$AUTOBUILD_PLATFORM" in
                 versub="vc12-${collada_version}"
                 ;;
             *)
-                fail "Unknown AUTOBUILD_VSVER='$AUTOBUILD_VSVER'"
+                echo "Unknown AUTOBUILD_VSVER='$AUTOBUILD_VSVER'" 1>&2 ; exit 1
                 ;;
         esac
         projdir="projects/$versub"
@@ -105,7 +102,7 @@ case "$AUTOBUILD_PLATFORM" in
         # helper                here                prefix                  release
         # repo                  root                run_tests               suffix
 
-        opts="${TARGET_OPTS:--arch $AUTOBUILD_CONFIGURE_ARCH -std=c++11 $LL_BUILD}"
+        opts="${TARGET_OPTS:--arch $AUTOBUILD_CONFIGURE_ARCH -std=c++11 $LL_BUILD_RELEASE}"
 
         libdir="$top/stage"
         mkdir -p "$libdir"/lib/release
@@ -156,7 +153,7 @@ case "$AUTOBUILD_PLATFORM" in
 ##      fi
 
         # Default target per --address-size
-        opts="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD}"
+        opts="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD_RELEASE}"
 
         # Handle any deliberate platform targeting
         if [ -z "${TARGET_CPPFLAGS:-}" ]; then
@@ -199,5 +196,3 @@ cp -a license/tinyxml-license.txt stage/LICENSES/tinyxml.txt
 
 mkdir -p stage/docs/colladadom/
 cp -a README.Linden stage/docs/colladadom/
-
-pass
