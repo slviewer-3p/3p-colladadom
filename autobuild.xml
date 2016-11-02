@@ -124,9 +124,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>bffe9eb67c6e74621266f31dfdfd1605</string>
+              <string>89a71a652a5ecd7cf6142ff56f40f018</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/813/1794/libxml2-2.9.4.500803-darwin64-500803.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/891/1973/libxml2-2.9.4.500877-darwin64-500877.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -148,9 +148,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>5f71f0d8de644c1fc8e6424b0d5fe5ce</string>
+              <string>740fc93f195c77b3a0c0800b31878ecb</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/812/1789/libxml2-2.9.4.500803-linux64-500803.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/890/1968/libxml2-2.9.4.500877-linux64-500877.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -160,9 +160,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>2659189d9024507ccebf4b6b2613599a</string>
+              <string>c2461ba7629c4cef5af623464aded3c6</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/814/1797/libxml2-2.9.4.500803-windows-500803.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/888/1960/libxml2-2.9.4.500877-windows-500877.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -172,16 +172,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>0d9a27b348e3365e251adca6b12a88b1</string>
+              <string>8ec25000f5d72e26c2e7555c73898fbb</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/815/1800/libxml2-2.9.4.500803-windows64-500803.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/889/1963/libxml2-2.9.4.500877-windows64-500877.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.9.4.500803</string>
+        <string>2.9.4.500877</string>
       </map>
       <key>pcre</key>
       <map>
