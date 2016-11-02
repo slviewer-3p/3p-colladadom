@@ -214,9 +214,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7a7adcb9074816bf8ca4e7eac6df7675</string>
+              <string>addfbc0635b0ea65d7a151dd7ec5ef85</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/495/1059/pcre-8.35.500401-darwin64-500401.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/909/2015/pcre-8.35.500898-darwin64-500898.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -238,9 +238,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>6344cbf8554f85e0f367c36b8d4fe420</string>
+              <string>0f058ca2176e7d02d51e54c66a96f336</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/473/1010/pcre-8.35.500401-linux64-500401.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/908/2010/pcre-8.35.500898-linux64-500898.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -250,9 +250,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8f548b79be7a122f3f596c25ba2307a6</string>
+              <string>150220f39f0aa5a8d9e609b450a9b147</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/517/1114/pcre-8.35.500401-windows-500401.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/911/2021/pcre-8.35.500898-windows-500898.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -262,16 +262,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>aaed62fee5b2eddf71e20bfcf4b63ae3</string>
+              <string>eaebfb4a96a6306ee8e0b18434d125f9</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/515/1111/pcre-8.35.500401-windows64-500401.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/910/2018/pcre-8.35.500898-windows64-500898.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>8.35.500401</string>
+        <string>8.35.500898</string>
       </map>
       <key>zlib</key>
       <map>
