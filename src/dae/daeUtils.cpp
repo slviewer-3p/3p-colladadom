@@ -94,6 +94,7 @@ list<string> cdom::tokenize(const string& s,
 	return result;
 }
 
+#if 0
 vector<string> cdom::makeStringArray(const char* s, ...) {
 	va_list args;
 	va_start(args, s);
@@ -117,6 +118,7 @@ list<string> cdom::makeStringList(const char* s, ...) {
 	va_end(args);
 	return result;
 }
+#endif 0
 
 string cdom::getCurrentDir() {
 #ifdef __CELLOS_LV2__

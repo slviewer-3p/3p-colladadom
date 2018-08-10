@@ -1,60 +1,98 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # turn on verbose debugging output for parabuild logs.
-set -x
+exec 4>&1; export BASH_XTRACEFD=4; set -x
 # make errors fatal
 set -e
+# complain about unset env variables
+set -u
 
 if [ -z "$AUTOBUILD" ] ; then
-    fail
+    exit 1
 fi
 
 if [ "$OSTYPE" = "cygwin" ] ; then
-    export AUTOBUILD="$(cygpath -u $AUTOBUILD)"
+    autobuild="$(cygpath -u $AUTOBUILD)"
+else
+    autobuild="$AUTOBUILD"
 fi
 
 #execute build from top-level checkout
 cd "$(dirname "$0")"
-
-# load autobuild provided shell functions and variables
-set +x
-eval "$("$AUTOBUILD" source_environment)"
-set -x
-
 top="$(pwd)"
 stage="$top/stage"
 
-[ -f "$stage"/packages/include/zlib/zlib.h ] || fail "You haven't installed zlib package yet."
+# load autobuild provided shell functions and variables
+source_environment_tempfile="$stage/source_environment.sh"
+"$autobuild" source_environment > "$source_environment_tempfile"
+. "$source_environment_tempfile"
 
-# version appears in readme.txt as 2.2 but extensive Readme.Linden suggests
-# that the real version is based on a 2.3 source drop.  Rather than try to
-# figure this out now, I'm going to 2.3 hardcoded here.
-collada_version="2.3"
+[ -f "$stage"/packages/include/zlib/zlib.h ] || \
+{ echo "You haven't yet run autobuild install." 1>&2 ; exit 1; }
+
+# There are two version numbers mixed up in the code below: the collada
+# version (e.g. 1.4, upstream from colladadom?) and the dom version (e.g. 2.3,
+# the version number we associate with this package). Get versions from
+# Makefile.
+# e.g. colladaVersion := 1.4
+collada_version="$(sed -n -E 's/^ *colladaVersion *:= *([0-9]+\.[0-9]+) *$/\1/p' \
+                       "$top/Makefile")"
+# remove embedded dots
+collada_shortver="${collada_version//.}"
+
+# e.g.
+# domMajorVersion := 2
+# domMinorVersion := 3
+dom_major="$(sed -n -E 's/^ *domMajorVersion *:= *([0-9]+) *$/\1/p' "$top/Makefile")"
+dom_minor="$(sed -n -E 's/^ *domMinorVersion *:= *([0-9]+) *$/\1/p' "$top/Makefile")"
+dom_version="$dom_major.$dom_minor"
+dom_shortver="$dom_major$dom_minor"
 build=${AUTOBUILD_BUILD_ID:=0}
-echo "${collada_version}.${build}" > "${stage}/VERSION.txt"
+echo "${dom_version}.${build}" > "${stage}/VERSION.txt"
 
 case "$AUTOBUILD_PLATFORM" in
 
-    windows)
-        build_sln "projects/vc12-1.4/dom.sln" "Debug|Win32" domTest
-        build_sln "projects/vc12-1.4/dom.sln" "Release|Win32" domTest
+    windows*)
+        case "$AUTOBUILD_VSVER" in
+            "120")
+                versub="vc12-${collada_version}"
+                ;;
+            *)
+                echo "Unknown AUTOBUILD_VSVER='$AUTOBUILD_VSVER'" 1>&2 ; exit 1
+                ;;
+        esac
+        projdir="projects/$versub"
+
+        build_sln "$projdir/dom.sln" "Release|$AUTOBUILD_WIN_VSPLATFORM" dom
+        build_sln "$projdir/dom.sln" "Release|$AUTOBUILD_WIN_VSPLATFORM" dom-static
+        build_sln "$projdir/dom.sln" "Release|$AUTOBUILD_WIN_VSPLATFORM" domTest
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-            build/vc12-1.4-d/domTest.exe -all
-            build/vc12-1.4/domTest.exe -all
+            if [ "$AUTOBUILD_ADDRSIZE" = 32 ]
+                then
+                    "build/$versub/domTest.exe" -all
+                else
+                    # 64 bit exe ends up in different location to 32 bit hard coded 
+                    # path to data directory - source code suggests it looks in a dir
+                    # called domTestData first so we make one
+                    mkdir -p "$projdir/x64/Release/domTestData"
+                    cp "test/${collada_version}/data"/* "$projdir/x64/Release/domTestData/"
+                    "$projdir/x64/Release/domTest.exe" -all
+            fi
         fi
 
         # stage the good bits
-        mkdir -p "$stage"/lib/{debug,release}
-        cp -a build/vc12-1.4-d/libcollada14dom23-sd.lib \
-            "$stage"/lib/debug/
+        mkdir -p "$stage"/lib/release
 
-        cp -a build/vc12-1.4/libcollada14dom23-s.lib \
-            "$stage"/lib/release/
+        libname="libcollada${collada_shortver}dom${dom_shortver}-s.lib"
+        if [ "$AUTOBUILD_ADDRSIZE" = 32 ]
+            then cp -a "build/$versub/$libname" "$stage"/lib/release/
+            else cp -a "$projdir/x64/Release/$libname" "$stage"/lib/release/ 
+        fi
     ;;
 
-    darwin)
+    darwin*)
         # Darwin build environment at Linden is also pre-polluted like Linux
         # and that affects colladadom builds.  Here are some of the env vars
         # to look out for:
@@ -64,40 +102,35 @@ case "$AUTOBUILD_PLATFORM" in
         # helper                here                prefix                  release
         # repo                  root                run_tests               suffix
 
-        # Select SDK with full path.  This shouldn't have much effect on this
-        # build but adding to establish a consistent pattern.
-        #
-        # sdk=/Developer/SDKs/MacOSX10.6.sdk/
-        # sdk=/Developer/SDKs/MacOSX10.7.sdk/
-        # sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/
-        sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/
-        opts="${TARGET_OPTS:--arch i386 -iwithsysroot $sdk -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070}"
+        opts="${TARGET_OPTS:--arch $AUTOBUILD_CONFIGURE_ARCH -std=c++11 $LL_BUILD_RELEASE}"
 
         libdir="$top/stage"
-        mkdir -p "$libdir"/lib/{debug,release}
+        mkdir -p "$libdir"/lib/release
 
-        make clean arch=i386                            # Hide 'arch' env var
+        make clean arch="$AUTOBUILD_CONFIGURE_ARCH" # Hide 'arch' env var
 
-        CFLAGS="$opts -gdwarf-2" \
-            CXXFLAGS="$opts -gdwarf-2" \
+        # Without the -Wno-etc flag, incredible spam is produced
+        make \
+            conf=release \
+            CFLAGS="$opts" \
+            CXXFLAGS="$opts -Wno-unused-local-typedef" \
             LDFLAGS="-Wl,-headerpad_max_install_names" \
-            arch=i386 \
-            make
+            arch="$AUTOBUILD_CONFIGURE_ARCH" \
+            printCommands=yes \
+            printMessages=yes
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-            build/mac-1.4-d/domTest -all
-            build/mac-1.4/domTest -all
+            "build/mac-${collada_version}/domTest" -all
         fi
 
-        # install_name_tool -id "@executable_path/../Resources/libcollada14dom-d.dylib" "build/mac-1.4-d/libcollada14dom-d.dylib"
-        # install_name_tool -id "@executable_path/../Resources/libcollada14dom.dylib" "build/mac-1.4/libcollada14dom.dylib"
+        # install_name_tool -id "@executable_path/../Resources/libcollada${collada_shortver}dom-d.dylib" "build/mac-${collada_version}-d/libcollada${collada_shortver}dom-d.dylib"
+        # install_name_tool -id "@executable_path/../Resources/libcollada${collada_shortver}dom.dylib" "build/mac-${collada_version}/libcollada${collada_shortver}dom.dylib"
 
-        cp -a build/mac-1.4-d/libcollada14dom-d.a "$libdir"/lib/debug/
-        cp -a build/mac-1.4/libcollada14dom.a "$libdir"/lib/release/
+        cp -a "build/mac-${collada_version}/libcollada${collada_shortver}dom.a" "$libdir"/lib/release/
     ;;
 
-    linux)
+    linux*)
         # Linux build environment at Linden comes pre-polluted with stuff that can
         # seriously damage 3rd-party builds.  Environmental garbage you can expect
         # includes:
@@ -113,17 +146,17 @@ case "$AUTOBUILD_PLATFORM" in
         #
         # unset DISTCC_HOSTS CC CXX CFLAGS CPPFLAGS CXXFLAGS
 
-        # Prefer gcc-4.6 if available.
-        if [ -x /usr/bin/gcc-4.6 -a -x /usr/bin/g++-4.6 ]; then
-            export CC=/usr/bin/gcc-4.6
-            export CXX=/usr/bin/g++-4.6
-        fi
+##      # Prefer gcc-4.6 if available.
+##      if [ -x /usr/bin/gcc-4.6 -a -x /usr/bin/g++-4.6 ]; then
+##          export CC=/usr/bin/gcc-4.6
+##          export CXX=/usr/bin/g++-4.6
+##      fi
 
-        # Default target to 32-bit
-        opts="${TARGET_OPTS:--m32}"
+        # Default target per --address-size
+        opts="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD_RELEASE}"
 
         # Handle any deliberate platform targeting
-        if [ -z "$TARGET_CPPFLAGS" ]; then
+        if [ -z "${TARGET_CPPFLAGS:-}" ]; then
             # Remove sysroot contamination from build environment
             unset CPPFLAGS
         else
@@ -132,24 +165,23 @@ case "$AUTOBUILD_PLATFORM" in
         fi
 
         libdir="$top/stage"
-        mkdir -p "$libdir"/lib/{debug,release}
+        mkdir -p "$libdir"/lib/release
 
-        make clean arch=i386            # Hide 'arch' env var
+        make clean arch="$AUTOBUILD_CONFIGURE_ARCH" # Hide 'arch' env var
 
-        LDFLAGS="$opts" \
+        make \
+            conf=release \
+            LDFLAGS="$opts" \
             CFLAGS="$opts" \
             CXXFLAGS="$opts" \
-            arch=i386 \
-            make
+            arch="$AUTOBUILD_CONFIGURE_ARCH"
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-            build/linux-1.4-d/domTest -all
-            build/linux-1.4/domTest -all
+            "build/linux-${collada_version}/domTest" -all
         fi
 
-        cp -a build/linux-1.4/libcollada14dom.a "$libdir"/lib/release/
-        cp -a build/linux-1.4-d/libcollada14dom-d.a "$libdir"/lib/debug/
+        cp -a "build/linux-${collada_version}/libcollada${collada_shortver}dom.a" "$libdir"/lib/release/
     ;;
 esac
 
@@ -164,6 +196,3 @@ cp -a license/tinyxml-license.txt stage/LICENSES/tinyxml.txt
 
 mkdir -p stage/docs/colladadom/
 cp -a README.Linden stage/docs/colladadom/
-
-pass
-
