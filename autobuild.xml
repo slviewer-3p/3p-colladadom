@@ -70,9 +70,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>80b1963d635e883cb5ed223e94406adb</string>
+              <string>0e054a8ddaa60ef14384e6ee252a9c4d</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/894/1976/boost-1.57-windows-500883.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/34677/289604/boost-1.67-windows-525739.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -82,9 +82,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>3d6a6373ed0daa490cdb4f92db45de52</string>
+              <string>a21ac2914bc0ab0a72f9b75a18244132</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/895/1979/boost-1.57-windows64-500883.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/34679/289612/boost-1.67-windows64-525739.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -160,9 +160,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>c2461ba7629c4cef5af623464aded3c6</string>
+              <string>240c33d5b269951e067992e94e30bd61</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/888/1960/libxml2-2.9.4.500877-windows-500877.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/33467/277087/libxml2-2.9.4.525024-windows-525024.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -172,9 +172,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8ec25000f5d72e26c2e7555c73898fbb</string>
+              <string>8a5c6d872150c091f104708b48453fbc</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/889/1963/libxml2-2.9.4.500877-windows64-500877.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/33469/277100/libxml2-2.9.4.525024-windows64-525024.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -250,9 +250,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>150220f39f0aa5a8d9e609b450a9b147</string>
+              <string>656288cde290853e5227ba2e021a6d40</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/911/2021/pcre-8.35.500898-windows-500898.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/32098/267255/pcre-8.35.524241-windows-524241.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -262,9 +262,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>eaebfb4a96a6306ee8e0b18434d125f9</string>
+              <string>ef828729203dae95ff82548f2c08145a</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/910/2018/pcre-8.35.500898-windows64-500898.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/32097/267247/pcre-8.35.524241-windows64-524241.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -340,9 +340,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>f92cbb0ab5e5d20789bf6102f9a27aa6</string>
+              <string>6ebf9cc0afef74a16eaf4c9c63e24973</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/868/1906/zlib-1.2.8.500857-windows-500857.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/31987/266792/zlib-1.2.8.524196-windows-524196.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -352,9 +352,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>70a56767f6a109af412838875d0b5f1b</string>
+              <string>af782ac55e9cd490f5b63dece3ed289f</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/869/1909/zlib-1.2.8.500857-windows64-500857.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/31986/266785/zlib-1.2.8.524196-windows64-524196.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
