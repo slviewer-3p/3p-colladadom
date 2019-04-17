@@ -214,9 +214,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>addfbc0635b0ea65d7a151dd7ec5ef85</string>
+              <string>bc13ee2ad0484bbe2ba9c135e51874f7</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/909/2015/pcre-8.35.500898-darwin64-500898.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/32091/267237/pcre-8.35.524241-darwin64-524241.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -304,9 +304,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>e204dee29902549f50af1af2bb098df5</string>
+              <string>0f6e23b0a1b306b5d33d755d4bcfec27</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/867/1903/zlib-1.2.8.500857-darwin64-500857.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/31964/266661/zlib-1.2.8.524196-darwin64-524196.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
