@@ -124,9 +124,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>89a71a652a5ecd7cf6142ff56f40f018</string>
+              <string>3eba83f47f307c6d2b8957906316ebba</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/891/1973/libxml2-2.9.4.500877-darwin64-500877.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/33468/277093/libxml2-2.9.4.525024-darwin64-525024.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
