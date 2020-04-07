@@ -124,9 +124,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>89a71a652a5ecd7cf6142ff56f40f018</string>
+              <string>f84f8b35eb6dd2db089137db5b231690</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/891/1973/libxml2-2.9.4.500877-darwin64-500877.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/55050/512039/libxml2-2.9.4.539066-darwin64-539066.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -160,9 +160,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>c2461ba7629c4cef5af623464aded3c6</string>
+              <string>5135af8629ed88f6aa41cc7caa7cc354</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/888/1960/libxml2-2.9.4.500877-windows-500877.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/55128/512196/libxml2-2.9.4.539066-windows-539066.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -172,16 +172,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8ec25000f5d72e26c2e7555c73898fbb</string>
+              <string>2062dd330d6ad87b3a5eaf9e258aa078</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/889/1963/libxml2-2.9.4.500877-windows64-500877.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/55127/512183/libxml2-2.9.4.539066-windows64-539066.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.9.4.500877</string>
+        <string>2.9.4.539066</string>
       </map>
       <key>pcre</key>
       <map>
