@@ -34,9 +34,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>f9a9722d5c0c8f7ad3894ef8e8a2d9c4</string>
+              <string>c68630bd937509573df87a41452bc464</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56205/526386/boost-1.67-darwin64-539833.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56315/526789/boost-1.72-darwin64-539869.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -70,9 +70,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>0d0dec103da4907342843cae5194bdec</string>
+              <string>097d04c5b064c4be4bc9edb885509a94</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56209/526346/boost-1.67-windows-539833.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56321/526797/boost-1.72-windows-539869.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -82,16 +82,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>2b833b9b3db11ba4a5d86bc1dac97d70</string>
+              <string>748c4d47cced7ba2b210eb6d0ed33497</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56208/526339/boost-1.67-windows64-539833.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56320/526777/boost-1.72-windows64-539869.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>1.67</string>
+        <string>1.72</string>
       </map>
       <key>libxml2</key>
       <map>
@@ -124,9 +124,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>58cb935e3d84da1030a98873a94c7e04</string>
+              <string>0706b9c3889d767af9f5105d9ffa9b51</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56195/526270/libxml2-2.9.4.539829-darwin64-539829.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56327/526819/libxml2-2.9.4.539866-darwin64-539866.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -160,9 +160,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>9731dfd89daf4ea34bed6bf2ab568a39</string>
+              <string>1b7b979a8387fbb0f278dc681558b9ef</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56201/526296/libxml2-2.9.4.539829-windows-539829.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56316/526755/libxml2-2.9.4.539866-windows-539866.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -172,16 +172,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>2abada41a58cf068fe296cf42b4e20f5</string>
+              <string>4f8ff97d6a9ab350306b62eec8adc810</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56199/526289/libxml2-2.9.4.539829-windows64-539829.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/56314/526748/libxml2-2.9.4.539866-windows64-539866.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.9.4.539829</string>
+        <string>2.9.4.539866</string>
       </map>
       <key>pcre</key>
       <map>
