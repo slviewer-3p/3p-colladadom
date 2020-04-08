@@ -65,13 +65,13 @@ endif
 # Test programs use some deprecated interfaces...
 ccFlags += -DBOOST_FILESYSTEM_DEPRECATED
 ifeq ($(os),linux)
-libOpts += -lboost_filesystem-mt$(debugSuffix)
+libOpts += -lboost_filesystem-mt$(archsupport)$(debugSuffix)
 else ifeq ($(os),mac)
-libOpts += -lboost_filesystem-mt$(debugSuffix)
+libOpts += -lboost_filesystem-mt$(archsupport)$(debugSuffix)
 else
 includeOpts += -Iexternal-libs/boost
-libOpts += external-libs/boost/lib/$(buildID)/libboost_system.a
-libOpts += external-libs/boost/lib/$(buildID)/libboost_filesystem.a
+libOpts += external-libs/boost/lib/$(buildID)/libboost_system$(archsupport).a
+libOpts += external-libs/boost/lib/$(buildID)/libboost_filesystem$(archsupport).a
 endif
 ifeq ($(os),ps3)
 # PS3 doesn't support C++ locales, so tell boost not to use them

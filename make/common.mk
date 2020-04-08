@@ -19,6 +19,12 @@ ccFlags += -O2 -DNDEBUG
 debugSuffix :=
 endif
 
+ifeq ($(arch),x86_64)
+archsupport := -x64
+else
+archsupport :=
+endif
+
 ifeq ($(os),mac)
 # Add the -arch flags to specify what architectures we're building for.
 ccFlags += $(addprefix -arch ,$(archs))
