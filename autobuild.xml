@@ -214,9 +214,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>addfbc0635b0ea65d7a151dd7ec5ef85</string>
+              <string>d8c0f97fe5abef43e72b6f84aba698b2</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/909/2015/pcre-8.35.500898-darwin64-500898.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/54856/510176/pcre-8.35.538986-darwin64-538986.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -250,9 +250,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>150220f39f0aa5a8d9e609b450a9b147</string>
+              <string>3660db45793df3050b63920bfb7d8479</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/911/2021/pcre-8.35.500898-windows-500898.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/55041/512002/pcre-8.35.538986-windows-538986.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -262,16 +262,16 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>eaebfb4a96a6306ee8e0b18434d125f9</string>
+              <string>cdee8e8b48a66266550bf279c40abc22</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/910/2018/pcre-8.35.500898-windows64-500898.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/55038/511992/pcre-8.35.538986-windows64-538986.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
         <key>version</key>
-        <string>8.35.500898</string>
+        <string>8.35.538986</string>
       </map>
       <key>zlib</key>
       <map>
