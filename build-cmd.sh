@@ -133,7 +133,7 @@ case "$AUTOBUILD_PLATFORM" in
         cp -a "build/mac-${collada_version}/libcollada${collada_shortver}dom.a" "$libdir"/lib/release/
     ;;
 
-    linux*)
+    linux64)
         # Linux build environment at Linden comes pre-polluted with stuff that can
         # seriously damage 3rd-party builds.  Environmental garbage you can expect
         # includes:
@@ -172,7 +172,7 @@ case "$AUTOBUILD_PLATFORM" in
 
         make clean arch="$AUTOBUILD_CONFIGURE_ARCH" # Hide 'arch' env var
 
-        make \
+        make -j6 \
             conf=release \
             LDFLAGS="$opts" \
             CFLAGS="$opts" \
