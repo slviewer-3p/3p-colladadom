@@ -34,9 +34,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>852719ef13eb942e9eb34c4e07e08638</string>
+              <string>5d84e55dc1435ebfc691b62ea7680426</string>
               <key>url</key>
-              <string>jf://packages/linux64/boost-1.72-linux64_bionic-221612039.tar.bz2</string>
+              <string>jf://packages/linux64/boost-1.72-linux64_bionic-222000904.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
