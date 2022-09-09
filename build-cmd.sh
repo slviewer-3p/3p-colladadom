@@ -172,7 +172,7 @@ case "$AUTOBUILD_PLATFORM" in
 
         make clean arch="$AUTOBUILD_CONFIGURE_ARCH" # Hide 'arch' env var
 
-        make -j6 \
+        make -j `nproc` \
             conf=release \
             LDFLAGS="$opts" \
             CFLAGS="$opts" \
