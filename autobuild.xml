@@ -329,7 +329,7 @@
     <key>package_description</key>
     <map>
       <key>canonical_repo</key>
-      <string>https://bitbucket.org/nickyd/3p-colladadom</string>
+      <string>https://github.com/slviewer-3p/3p-colladadom</string>
       <key>copyright</key>
       <string>Copyright 2006 Sony Computer Entertainment Inc.</string>
       <key>license</key>
