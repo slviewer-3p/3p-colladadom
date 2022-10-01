@@ -134,27 +134,6 @@ case "$AUTOBUILD_PLATFORM" in
     ;;
 
     linux64)
-        # Linux build environment at Linden comes pre-polluted with stuff that can
-        # seriously damage 3rd-party builds.  Environmental garbage you can expect
-        # includes:
-        #
-        #    DISTCC_POTENTIAL_HOSTS     arch           root        CXXFLAGS
-        #    DISTCC_LOCATION            top            branch      CC
-        #    DISTCC_HOSTS               build_name     suffix      CXX
-        #    LSDISTCC_ARGS              repo           prefix      CFLAGS
-        #    cxx_version                AUTOBUILD      SIGN        CPPFLAGS
-        #
-        # So, clear out bits that shouldn't affect our configure-directed build
-        # but which do nonetheless.
-        #
-        # unset DISTCC_HOSTS CC CXX CFLAGS CPPFLAGS CXXFLAGS
-
-##      # Prefer gcc-4.6 if available.
-##      if [ -x /usr/bin/gcc-4.6 -a -x /usr/bin/g++-4.6 ]; then
-##          export CC=/usr/bin/gcc-4.6
-##          export CXX=/usr/bin/g++-4.6
-##      fi
-
         # Default target per --address-size
         opts="${TARGET_OPTS:-${AUTOBUILD_GCC_ARCH} $LL_BUILD_RELEASE}"
 
@@ -177,7 +156,7 @@ case "$AUTOBUILD_PLATFORM" in
             LDFLAGS="$opts" \
             CFLAGS="$opts" \
             CXXFLAGS="$opts" \
-            arch="$AUTOBUILD_CONFIGURE_ARCH"
+            arch="$AUTOBUILD_ARCH"
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then

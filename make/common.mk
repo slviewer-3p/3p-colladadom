@@ -21,6 +21,8 @@ endif
 
 ifeq ($(arch),x86_64)
 archsupport := -x64
+else ifeq ($(arch),aarch64)
+archsupport := -a64
 else
 archsupport :=
 endif
